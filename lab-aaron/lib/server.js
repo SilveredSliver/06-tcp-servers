@@ -53,7 +53,7 @@ eventNew.on('@to', function(client, string) {
   let message = string.split(' ').splice(1).join(' ').trim();
   chatPool.forEach(poolPerson => {
     if (poolPerson.nickname === nickname) {
-      poolPerson.socket.write(`${client.nickname}: ${message}\n`)
+      poolPerson.socket.write(`${client.nickname}: ${message}\n`);
     };
   });
 });
